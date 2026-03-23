@@ -38,8 +38,8 @@ def main():
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
     
-    train_loader = MyDataloader("/content/tiny-imagenet/tiny-imagenet-200/train").getDataloader()
-    val_loader = MyDataloader("/content/tiny-imagenet/tiny-imagenet-200/val").getDataloader()
+    train_loader = MyDataloader("/tiny-imagenet/tiny-imagenet-200/train").getDataloader()
+    val_loader = MyDataloader("/tiny-imagenet/tiny-imagenet-200/val").getDataloader()
 
     best_acc = 0
 
