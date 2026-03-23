@@ -43,7 +43,7 @@ def main():
 
     best_acc = 0
 
-    num_epochs = 10
+    num_epochs = 1
     for epoch in range(1, num_epochs + 1):
         train(epoch, model, train_loader, criterion, optimizer)
         val_accuracy = validate(model, val_loader, criterion)
