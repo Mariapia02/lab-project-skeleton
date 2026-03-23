@@ -29,13 +29,13 @@ def validate(model, val_loader, criterion):
 
 
 def main():
-    model = torch.load("./checkpoints/model1.t", weights_only=False)
+    model = torch.load('checkpoints/my_model.pth', weights_only=False)
     if torch.cuda.is_available():
         model = model.to_device('cuda')
     criterion = nn.CrossEntropyLoss()
      
-    val_loader = MyDataloader("somePath")
-    val_loader = val_loader.getDataLoader()
+    val_loader = MyDataloader("/content/data/tiny-imagenet-200/val").getDataLoader()
+    
     best_acc = 0
 
     val_accuracy = validate(model, val_loader, criterion)
