@@ -34,7 +34,7 @@ def main():
         model = model.to_device('cuda')
     criterion = nn.CrossEntropyLoss()
      
-    val_loader = MyDataloader("/content/data/tiny-imagenet-200/val").getDataLoader()
+    val_loader = MyDataloader("/content/tiny-imagenet/tiny-imagenet-200/val").getDataLoader()
 
     best_acc = 0
 
