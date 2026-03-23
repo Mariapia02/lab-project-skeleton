@@ -1,3 +1,6 @@
+import torch
+from torch import nn
+
 class CustomNet(nn.Module):
     def __init__(self): 
         super(CustomNet, self).__init__()
