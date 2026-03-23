@@ -35,7 +35,7 @@ def main():
     criterion = nn.CrossEntropyLoss()
      
     val_loader = MyDataloader("/content/data/tiny-imagenet-200/val").getDataLoader()
-    
+
     best_acc = 0
 
     val_accuracy = validate(model, val_loader, criterion)
@@ -44,5 +44,6 @@ def main():
 
     return
 # Here we are using only the best model that has been saved, without updating the weights
-main()
+if __name__ == "__main__":
+    main()
 
