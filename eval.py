@@ -29,7 +29,7 @@ def validate(model, val_loader, criterion):
 
 
 def main():
-    model = torch.load('checkpoints/my_model.pth', weights_only=False)
+    model = torch.load('./checkpoints/model.t', weights_only=False)
     if torch.cuda.is_available():
         model = model.to_device('cuda')
     criterion = nn.CrossEntropyLoss()
