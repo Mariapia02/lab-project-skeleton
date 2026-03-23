@@ -9,8 +9,7 @@ class CustomNet(nn.Module):
         self.conv2 = nn.Conv2d(64, 128, kernel_size=3, padding=1)
         self.conv3 = nn.Conv2d(128, 256, kernel_size=3, padding=1)
 
-        self.AdaptiveAvgPool2d((1,1)) 
-
+        self.pool = nn.AdaptiveAvgPool2d((1,1))
         self.fc1 = nn.Linear(256, 200)
 
     def forward(self, x):
