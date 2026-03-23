@@ -1,7 +1,7 @@
-from data.Dataset_Dataloader import MyDataloader
-from models.customnet import CustomNet
 import torch
 from torch import nn
+from data.Dataset_Dataloader import MyDataloader
+from models.customnet import CustomNet
 
 def validate(model, val_loader, criterion):
     model.eval()
@@ -43,5 +43,6 @@ def main():
     best_acc = max(best_acc, val_accuracy)
 
     return
-
+# Here we are using only the best model that has been saved, without updating the weights
 main()
+

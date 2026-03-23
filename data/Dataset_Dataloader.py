@@ -28,3 +28,4 @@ class MyDataloader():
     def getDataloader(self, batch_size:int = 32, shuffle:bool = True, num_workers:int=8):
         return DataLoader(self.imageFolder, batch_size = batch_size, shuffle = shuffle, num_workers=num_workers)
     
+    
