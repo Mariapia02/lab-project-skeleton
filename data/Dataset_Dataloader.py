@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 
 class MyDataloader():
      
-    def __init__(self, root, transformations:None):
+    def __init__(self, root, transformations=None):
 
         self.root = root
 
